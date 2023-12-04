@@ -1,11 +1,11 @@
 import React, { PureComponent } from 'react';
 import { PieChart, Pie, Sector, Cell, ResponsiveContainer,Tooltip } from 'recharts';
-import { convertDataChart4 } from '../../utils';
+import { convertDataChart7 } from '../../utils';
 
 
 
 const ReCharts3 = (props) => {
-  const data = convertDataChart4(props.data,'price')
+  const data = convertDataChart7(props.data,'price')
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042','#9A3B3B','#C08261'];
 
 

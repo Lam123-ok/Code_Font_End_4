@@ -158,7 +158,7 @@ export const convertDataChart4 = (data, type) => {
       })
       const results = Array.isArray(Object.keys(object)) && Object.keys(object).map((item) => {
           return {
-              name: `Sản phẩm giá ${item}`,
+              name: `${item}`,
               value: object[item]
           }
       })
@@ -203,6 +203,28 @@ export const convertDataChart6 = (data, type) => {
       const results = Array.isArray(Object.keys(object)) && Object.keys(object).map((item) => {
           return {
               name: item ? 'Đã thanh toán' : 'Chưa thanh toán',
+              value: object[item]
+          }
+      })
+      return results
+  }catch(e) {
+      return []
+  }
+}
+
+export const convertDataChart7 = (data, type) => {
+  try {
+      const object = {}
+      Array.isArray(data) && data.forEach((opt) => {
+          if(!object[opt[type]]) {
+              object[opt[type]] = 1
+          } else {
+              object[opt[type]]+=1
+          }
+      })
+      const results = Array.isArray(Object.keys(object)) && Object.keys(object).map((item) => {
+          return {
+              name: `Sản phẩm giá ${item} VND` ,
               value: object[item]
           }
       })

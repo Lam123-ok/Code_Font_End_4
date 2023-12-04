@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react"; 
 // Dùng để viết JSx
 import {Badge, Col, Popover} from 'antd' 
-// Sử dụng để phân chia cột từ ant design
-import Search from "antd/es/input/Search"; 
 // Tạo ra thanh tìm kiếm ở đầu trang từ ant design
 import { WrapperHeader, 
   WrapperText, WrapperHeaderAccout, 
